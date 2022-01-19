@@ -5,7 +5,6 @@ function NewExpense({ onAddExpenseData }) {
 
     const saveExpensedData = (enteredExpenseData) => {
         const expenseData = {
-            id: 'e' + String(Math.floor(Math.random() * 10) + 5),
             ...enteredExpenseData
         }
 

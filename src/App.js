@@ -31,7 +31,12 @@ function App() {
   ])
 
   const addExpenseData = (expenseData) => {
-    setExpenses((prevState) => [...prevState, expenseData])
+    const newExpenseData = {
+      ...expenseData,
+      id: String('e' + (expenses.length + 1))
+    }
+    setExpenses((prevState) => [newExpenseData, ...prevState])
+    console.log(newExpenseData)
   }
   return (
     <div className="App">
