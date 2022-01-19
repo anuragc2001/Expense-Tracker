@@ -6,7 +6,7 @@ import { useState } from 'react'
 import ExpensesChart from './ExpensesChart';
 function Expenses({ items }) {
 
-    const currYear = new Date().getFullYear()
+    let currYear = String(new Date().getFullYear())
     const [filteredYear, setFilteredYear] = useState(currYear);
 
     const filterChangeHandler = selectedYear => {
